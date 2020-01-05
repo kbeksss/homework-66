@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Button, Col, Form, FormGroup, Input} from "reactstrap";
 import axiosAPI from "../../axios-page";
+import withLoader from "../../hoc/withLoader";
 
 class Admin extends Component {
     state = {
@@ -72,4 +73,4 @@ class Admin extends Component {
     }
 }
 
-export default Admin;
+export default withLoader(Admin, axiosAPI);

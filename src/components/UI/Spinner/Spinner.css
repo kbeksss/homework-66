@@ -1,0 +1,51 @@
+body {
+    background: #ecf0f1;
+}
+.Spinner {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    z-index: 9999;
+    left: 50%;
+    transform: translate(-10%, -15%)
+}
+.Spinner hr {
+    border: 0;
+    margin: 0;
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    border-radius: 50%;
+    animation: spin 2s ease infinite;
+}
+.Spinner :first-child {
+    background: #007BFF;
+    animation-delay: -1.5s;
+}
+.Spinner :nth-child(2) {
+    background: #007BFF;
+    animation-delay: -1s;
+}
+.Spinner :nth-child(3) {
+    background: #007BFF;
+    animation-delay: -0.5s;
+}
+.Spinner :last-child {
+    background: #007BFF
+}
+@keyframes spin {
+    0%, 100% {
+        transform: translate(0);
+    }
+    25% {
+        transform: translate(160%);
+    }
+    50% {
+        transform: translate(160%, 160%);
+    }
+    75% {
+        transform: translate(0, 160%);
+    }
+}
+
