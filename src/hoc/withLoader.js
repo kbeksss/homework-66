@@ -27,7 +27,7 @@ const WithLoader = (WrappedComponent, axios) => {
         render() {
             return(
                 <Fragment>
-                    <WrappedComponent/>
+                    <WrappedComponent {...this.props}/>
                     <Backdrop loading={this.state.loader} show={this.state.loader}/>
                 </Fragment>
             );

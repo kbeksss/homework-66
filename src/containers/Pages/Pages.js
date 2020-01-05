@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axiosAPI from "../../axios-page";
 import {Button, Card, CardText, CardTitle, Col, Row} from "reactstrap";
+import withLoader from "../../hoc/withLoader";
 
 class Pages extends Component {
     state = {
@@ -47,4 +48,4 @@ class Pages extends Component {
     }
 }
 
-export default Pages;
+export default withLoader(Pages, axiosAPI);
