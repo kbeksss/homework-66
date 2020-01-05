@@ -20,14 +20,8 @@ class Admin extends Component {
                 title: this.state.title,
                 description: this.state.description
             };
-            let postData = await axiosAPI.put('pages/' + this.state.pageName + '.json', data);
-            //todo: kjkljjlkj
-            if(postData.statusText === 'OK'){
-                alert('Changes are saved');
-                this.props.history.replace('/pages/' + this.state.pageName);
-            } else {
-                alert('Changes aren\'t saved');
-            }
+            await axiosAPI.put('pages/' + this.state.pageName + '.json', data);
+            this.props.history.replace('/pages/' + this.state.pageName);
         }
     };
     getData = async (name) => {
